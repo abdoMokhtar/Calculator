@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Kanit", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  background-image: url(wave.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  background-color: #161a1e;
+  width: 320px;
+  padding: 20px;
+  min-height: 500px;
+  border-radius: 20px;
+}
+section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 50px);
+  place-content: center;
+  gap: 15px;
+}
+.container p.show {
+  height: 90px;
+  width: 90%;
+  color: white;
+  margin: 20px auto;
+  font-size: 35px;
+}
+
+section span,
+.delete,
+button {
+  display: grid;
+  place-content: center;
+  border-radius: 10px;
+  margin: 0 5px;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+}
+section span {
+  background-color: #26313c;
+  font-size: 25px;
+  transition: scale 5s ease-in-out;
+}
+section span:hover {
+  transform: scale(1.2);
+}
+
+section :nth-child(18) {
+  grid-column: 3 / 5;
+  margin-left: 20px;
+}
+
+section :nth-child(12) {
+  grid-row: 3 / 5;
+  grid-column: 4;
+  margin: 10px 5px;
+}
+
+.operator:not(:last-of-type) {
+  background-color: #005db2;
+  font-size: 27px;
+}
+.operator:last-of-type {
+  background-color: #1991ff;
+}
+button {
+  border: none;
+  font-size: 19px;
+}
+
+.clear,
+.delete {
+  background-color: #606060;
+  text-align: center;
+}
